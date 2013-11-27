@@ -1,0 +1,2571 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="BTekModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="BTekModelStoreContainer">
+          <EntitySet Name="AddressSchema" EntityType="BTekModel.Store.AddressSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="EmailSchema" EntityType="BTekModel.Store.EmailSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="InvitationSchema" EntityType="BTekModel.Store.InvitationSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LocationSchema" EntityType="BTekModel.Store.LocationSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LogBookSchema" EntityType="BTekModel.Store.LogBookSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="LogSchema" EntityType="BTekModel.Store.LogSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MaterialSchema" EntityType="BTekModel.Store.MaterialSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="MemberSchema" EntityType="BTekModel.Store.MemberSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrganisationSchema" EntityType="BTekModel.Store.OrganisationSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProjectSchema" EntityType="BTekModel.Store.ProjectSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="RoleSchema" EntityType="BTekModel.Store.RoleSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ScheduleSchema" EntityType="BTekModel.Store.ScheduleSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ServiceSchema" EntityType="BTekModel.Store.ServiceSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StageSchema" EntityType="BTekModel.Store.StageSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="sysdiagrams" EntityType="BTekModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="TaskSchema" EntityType="BTekModel.Store.TaskSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserScheduleSchema" EntityType="BTekModel.Store.UserScheduleSchema" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserSchema" EntityType="BTekModel.Store.UserSchema" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__dbo_TaskS__Creat__7849DB76" Association="BTekModel.Store.FK__dbo_TaskS__Creat__7849DB76">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="TaskSchema" EntitySet="TaskSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Curre__7755B73D" Association="BTekModel.Store.FK__dbo_TaskS__Curre__7755B73D">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="TaskSchema" EntitySet="TaskSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Organ__76619304" Association="BTekModel.Store.FK__dbo_TaskS__Organ__76619304">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="TaskSchema" EntitySet="TaskSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Proje__756D6ECB" Association="BTekModel.Store.FK__dbo_TaskS__Proje__756D6ECB">
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+            <End Role="TaskSchema" EntitySet="TaskSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__Membe__02084FDA" Association="BTekModel.Store.FK__Invitatio__Membe__02084FDA">
+            <End Role="MemberSchema" EntitySet="MemberSchema" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__OrgId__04E4BC85" Association="BTekModel.Store.FK__Invitatio__OrgId__04E4BC85">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__Recip__01142BA1" Association="BTekModel.Store.FK__Invitatio__Recip__01142BA1">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__RoleI__02FC7413" Association="BTekModel.Store.FK__Invitatio__RoleI__02FC7413">
+            <End Role="RoleSchema" EntitySet="RoleSchema" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__Sende__03F0984C" Association="BTekModel.Store.FK__Invitatio__Sende__03F0984C">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LocationS__UserI__412EB0B6" Association="BTekModel.Store.FK__LocationS__UserI__412EB0B6">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="LocationSchema" EntitySet="LocationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LogBookSc__OrgId__40058253" Association="BTekModel.Store.FK__LogBookSc__OrgId__40058253">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="LogBookSchema" EntitySet="LogBookSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LogBookSc__Proje__3F115E1A" Association="BTekModel.Store.FK__LogBookSc__Proje__3F115E1A">
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+            <End Role="LogBookSchema" EntitySet="LogBookSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LogBookSc__UserI__40F9A68C" Association="BTekModel.Store.FK__LogBookSc__UserI__40F9A68C">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="LogBookSchema" EntitySet="LogBookSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialS__OrgId__6442E2C9" Association="BTekModel.Store.FK__MaterialS__OrgId__6442E2C9">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="MaterialSchema" EntitySet="MaterialSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialS__Proje__634EBE90" Association="BTekModel.Store.FK__MaterialS__Proje__634EBE90">
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+            <End Role="MaterialSchema" EntitySet="MaterialSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialS__Stage__625A9A57" Association="BTekModel.Store.FK__MaterialS__Stage__625A9A57">
+            <End Role="StageSchema" EntitySet="StageSchema" />
+            <End Role="MaterialSchema" EntitySet="MaterialSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__OrgId__797309D9" Association="BTekModel.Store.FK__MemberSch__OrgId__797309D9">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="MemberSchema" EntitySet="MemberSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__RoleI__778AC167" Association="BTekModel.Store.FK__MemberSch__RoleI__778AC167">
+            <End Role="RoleSchema" EntitySet="RoleSchema" />
+            <End Role="MemberSchema" EntitySet="MemberSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__Sched__76969D2E" Association="BTekModel.Store.FK__MemberSch__Sched__76969D2E">
+            <End Role="ScheduleSchema" EntitySet="ScheduleSchema" />
+            <End Role="MemberSchema" EntitySet="MemberSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__UserI__787EE5A0" Association="BTekModel.Store.FK__MemberSch__UserI__787EE5A0">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="MemberSchema" EntitySet="MemberSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Organisat__Addre__4E88ABD4" Association="BTekModel.Store.FK__Organisat__Addre__4E88ABD4">
+            <End Role="AddressSchema" EntitySet="AddressSchema" />
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Organisat__Owner__4F7CD00D" Association="BTekModel.Store.FK__Organisat__Owner__4F7CD00D">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProjectSc__CustA__571DF1D5" Association="BTekModel.Store.FK__ProjectSc__CustA__571DF1D5">
+            <End Role="AddressSchema" EntitySet="AddressSchema" />
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProjectSc__OrgId__5812160E" Association="BTekModel.Store.FK__ProjectSc__OrgId__5812160E">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProjectSc__SiteA__5629CD9C" Association="BTekModel.Store.FK__ProjectSc__SiteA__5629CD9C">
+            <End Role="AddressSchema" EntitySet="AddressSchema" />
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RoleSchem__Organ__6FE99F9F" Association="BTekModel.Store.FK__RoleSchem__Organ__6FE99F9F">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="RoleSchema" EntitySet="RoleSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RoleSchem__Sched__6EF57B66" Association="BTekModel.Store.FK__RoleSchem__Sched__6EF57B66">
+            <End Role="ScheduleSchema" EntitySet="ScheduleSchema" />
+            <End Role="RoleSchema" EntitySet="RoleSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StageSche__OrgId__55009F39" Association="BTekModel.Store.FK__StageSche__OrgId__55009F39">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="StageSchema" EntitySet="StageSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StageSche__Proje__540C7B00" Association="BTekModel.Store.FK__StageSche__Proje__540C7B00">
+            <End Role="ProjectSchema" EntitySet="ProjectSchema" />
+            <End Role="StageSchema" EntitySet="StageSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSched__Organ__7EF6D905" Association="BTekModel.Store.FK__UserSched__Organ__7EF6D905">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchema" />
+            <End Role="UserScheduleSchema" EntitySet="UserScheduleSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSched__Sched__7E02B4CC" Association="BTekModel.Store.FK__UserSched__Sched__7E02B4CC">
+            <End Role="ScheduleSchema" EntitySet="ScheduleSchema" />
+            <End Role="UserScheduleSchema" EntitySet="UserScheduleSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSched__UserI__7FEAFD3E" Association="BTekModel.Store.FK__UserSched__UserI__7FEAFD3E">
+            <End Role="UserSchema" EntitySet="UserSchema" />
+            <End Role="UserScheduleSchema" EntitySet="UserScheduleSchema" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSchem__Addre__2A4B4B5E" Association="BTekModel.Store.FK__UserSchem__Addre__2A4B4B5E">
+            <End Role="AddressSchema" EntitySet="AddressSchema" />
+            <End Role="UserSchema" EntitySet="UserSchema" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AddressSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="_id" Type="uniqueidentifier" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="Address1" Type="nvarchar(max)" />
+          <Property Name="Address2" Type="nvarchar(max)" />
+          <Property Name="Suburb" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostCode" Type="nvarchar" MaxLength="20" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="Country" Type="nvarchar" MaxLength="50" />
+          <Property Name="xlon" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ylat" Type="numeric" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="EmailSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="To" Type="nvarchar" MaxLength="50" />
+          <Property Name="Subject" Type="nvarchar" MaxLength="100" />
+          <Property Name="Message" Type="nvarchar(max)" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="Attachment" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="InvitationSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="OrgId" Type="int" />
+          <Property Name="SenderId" Type="int" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="MemberId" Type="int" />
+          <Property Name="RecipientEmail" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="RecipientId" Type="int" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="DateSent" Type="datetime" />
+          <Property Name="DateExpires" Type="datetime" />
+          <Property Name="Message" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="LocationSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="Recorded" Type="datetime" Nullable="false" />
+          <Property Name="Source" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Accuracy" Type="int" />
+          <Property Name="Altitude" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Bearing" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Speed" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="xlon" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ylat" Type="numeric" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="LogBookSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="OrgId" Type="int" />
+          <Property Name="ProjectId" Type="int" />
+          <Property Name="AddressId" Type="int" />
+          <Property Name="Started" Type="datetime" />
+          <Property Name="Ended" Type="datetime" />
+          <Property Name="DurationMS" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="DistSource" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="DistTravelled" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Activity" Type="nvarchar" MaxLength="100" />
+          <Property Name="Confidence" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="OdometerStart" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="OdometerEnd" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="IsBusinessRelated" Type="bit" />
+          <Property Name="Notes" Type="nvarchar(max)" />
+          <Property Name="Source" Type="nvarchar(max)" />
+          <Property Name="AvgAltitude" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="MinAltitude" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="MaxAltitude" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="AvgSpeed" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="MinSpeed" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="MaxSpeed" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="AvgAccuracy" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Updates" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Start_xlon" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Start_ylon" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="End_xlon" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="End_ylon" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Address_Street" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address_Suburb" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address_PostCode" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address_State" Type="nvarchar" MaxLength="100" />
+          <Property Name="Address_Country" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="LogSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="Generated" Type="datetime" />
+          <Property Name="Object" Type="nvarchar(max)" />
+          <Property Name="Method" Type="nvarchar" MaxLength="50" />
+          <Property Name="Severity" Type="nvarchar" MaxLength="50" />
+          <Property Name="Message" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="MaterialSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="OrgId" Type="int" />
+          <Property Name="ProjectId" Type="int" />
+          <Property Name="StageId" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="UnitCost" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Quantity" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="DeliveryCost" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="TotalCost" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="QuotedValue" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="IsOrdered" Type="bit" />
+          <Property Name="IsDelivered" Type="bit" />
+          <Property Name="ShowOnQuote" Type="bit" />
+        </EntityType>
+        <EntityType Name="MemberSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="OrgId" Type="int" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="RoleId" Type="int" />
+          <Property Name="ScheduleId" Type="int" />
+          <Property Name="IsOwner" Type="bit" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OrganisationSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="OwnerId" Type="int" />
+          <Property Name="AddressId" Type="int" />
+          <Property Name="AccountType" Type="int" />
+          <Property Name="AccountStatus" Type="int" />
+          <Property Name="DateCreated" Type="datetime" />
+          <Property Name="DateUpdated" Type="datetime" />
+          <Property Name="DateExpires" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProjectSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="OrgId" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Code" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustFirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustLastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustAddressId" Type="int" />
+          <Property Name="SiteAddressId" Type="int" />
+          <Property Name="QuotedValue" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="QuotedHrs" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ActualHrs" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Margin" Type="numeric" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="RoleSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="OrganisationId" Type="int" />
+          <Property Name="ScheduleId" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Rate" Type="int" />
+          <Property Name="ModifyOrg" Type="bit" />
+          <Property Name="ModifyRole" Type="bit" />
+          <Property Name="ModifyPerson" Type="bit" />
+          <Property Name="ModifyLogbook" Type="bit" />
+          <Property Name="ModifyProject" Type="bit" />
+          <Property Name="ModifyStage" Type="bit" />
+          <Property Name="ModifyMaterial" Type="bit" />
+          <Property Name="ModifyTask" Type="bit" />
+          <Property Name="ModifyTool" Type="bit" />
+        </EntityType>
+        <EntityType Name="ScheduleSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="RepeatDays" Type="nvarchar" MaxLength="50" />
+          <Property Name="StartTimeMS" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="EndTimeMS" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="FrequencyMS" Type="numeric" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="ServiceSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="SystemName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="ServiceName" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Version" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="LiveUrl" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="DevUrl" Type="nvarchar" MaxLength="50" />
+          <Property Name="TestUrl" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="StageSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="OrgId" Type="int" />
+          <Property Name="ProjectId" Type="int" />
+          <Property Name="Sequence" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Description" Type="nvarchar" MaxLength="100" />
+          <Property Name="QuotedValue" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ShowOnQuote" Type="bit" />
+          <Property Name="EstStartDate" Type="datetime" />
+          <Property Name="IsComplete" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="TaskSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="CreatorId" Type="int" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CurrentOwnerId" Type="int" />
+          <Property Name="LastUpdateDate" Type="datetime" />
+          <Property Name="OrganisationId" Type="int" />
+          <Property Name="ProjectId" Type="int" />
+          <Property Name="ProjectStageId" Type="int" />
+          <Property Name="EstStartDate" Type="datetime" />
+          <Property Name="EstHours" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="ActStartDate" Type="datetime" />
+          <Property Name="ActHours" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Priority" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="Status" Type="nvarchar" MaxLength="100" />
+          <Property Name="Title" Type="nvarchar" MaxLength="100" />
+          <Property Name="Detail" Type="nvarchar" MaxLength="100" />
+          <Property Name="History" Type="nvarchar" MaxLength="100" />
+          <Property Name="NotifyNoShow" Type="bit" />
+          <Property Name="NotifyApproach" Type="bit" />
+          <Property Name="MyTaskRating" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="BossTaskRating" Type="numeric" Precision="10" Scale="2" />
+          <Property Name="CustTaskRating" Type="numeric" Precision="10" Scale="2" />
+        </EntityType>
+        <EntityType Name="UserScheduleSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="_id" Type="uniqueidentifier" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" />
+          <Property Name="UserId" Type="int" />
+          <Property Name="OrganisationId" Type="int" />
+          <Property Name="ScheduleId" Type="int" />
+        </EntityType>
+        <EntityType Name="UserSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="AddressId" Type="int" />
+          <Property Name="LastSvrUpdateDate" Type="datetime" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Username" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Salt" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="WPUserId" Type="int" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="AccountType" Type="int" />
+          <Property Name="AccountStatus" Type="int" />
+          <Property Name="DateCreated" Type="datetime" Nullable="false" />
+          <Property Name="DateUpdated" Type="datetime" Nullable="false" />
+          <Property Name="DateExpires" Type="datetime" />
+        </EntityType>
+        <Association Name="FK__dbo_TaskS__Creat__7849DB76">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.Store.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="CreatorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Curre__7755B73D">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.Store.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="CurrentOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Organ__76619304">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.Store.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="OrganisationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Proje__756D6ECB">
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.Store.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__Membe__02084FDA">
+          <End Role="MemberSchema" Type="BTekModel.Store.MemberSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.Store.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__OrgId__04E4BC85">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.Store.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__Recip__01142BA1">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.Store.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="RecipientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__RoleI__02FC7413">
+          <End Role="RoleSchema" Type="BTekModel.Store.RoleSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.Store.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__Sende__03F0984C">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.Store.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="SenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LocationS__UserI__412EB0B6">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="LocationSchema" Type="BTekModel.Store.LocationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LocationSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LogBookSc__OrgId__40058253">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="LogBookSchema" Type="BTekModel.Store.LogBookSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LogBookSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LogBookSc__Proje__3F115E1A">
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="0..1" />
+          <End Role="LogBookSchema" Type="BTekModel.Store.LogBookSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LogBookSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LogBookSc__UserI__40F9A68C">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="LogBookSchema" Type="BTekModel.Store.LogBookSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LogBookSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialS__OrgId__6442E2C9">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="MaterialSchema" Type="BTekModel.Store.MaterialSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialS__Proje__634EBE90">
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="0..1" />
+          <End Role="MaterialSchema" Type="BTekModel.Store.MaterialSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialS__Stage__625A9A57">
+          <End Role="StageSchema" Type="BTekModel.Store.StageSchema" Multiplicity="0..1" />
+          <End Role="MaterialSchema" Type="BTekModel.Store.MaterialSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StageSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialSchema">
+              <PropertyRef Name="StageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__OrgId__797309D9">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.Store.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__RoleI__778AC167">
+          <End Role="RoleSchema" Type="BTekModel.Store.RoleSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.Store.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__Sched__76969D2E">
+          <End Role="ScheduleSchema" Type="BTekModel.Store.ScheduleSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.Store.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="ScheduleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__UserI__787EE5A0">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.Store.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Organisat__Addre__4E88ABD4">
+          <End Role="AddressSchema" Type="BTekModel.Store.AddressSchema" Multiplicity="0..1" />
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrganisationSchema">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Organisat__Owner__4F7CD00D">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrganisationSchema">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProjectSc__CustA__571DF1D5">
+          <End Role="AddressSchema" Type="BTekModel.Store.AddressSchema" Multiplicity="0..1" />
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProjectSchema">
+              <PropertyRef Name="CustAddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProjectSc__OrgId__5812160E">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProjectSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProjectSc__SiteA__5629CD9C">
+          <End Role="AddressSchema" Type="BTekModel.Store.AddressSchema" Multiplicity="0..1" />
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProjectSchema">
+              <PropertyRef Name="SiteAddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RoleSchem__Organ__6FE99F9F">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="RoleSchema" Type="BTekModel.Store.RoleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleSchema">
+              <PropertyRef Name="OrganisationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RoleSchem__Sched__6EF57B66">
+          <End Role="ScheduleSchema" Type="BTekModel.Store.ScheduleSchema" Multiplicity="0..1" />
+          <End Role="RoleSchema" Type="BTekModel.Store.RoleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleSchema">
+              <PropertyRef Name="ScheduleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StageSche__OrgId__55009F39">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="StageSchema" Type="BTekModel.Store.StageSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StageSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StageSche__Proje__540C7B00">
+          <End Role="ProjectSchema" Type="BTekModel.Store.ProjectSchema" Multiplicity="0..1" />
+          <End Role="StageSchema" Type="BTekModel.Store.StageSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StageSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSched__Organ__7EF6D905">
+          <End Role="OrganisationSchema" Type="BTekModel.Store.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="UserScheduleSchema" Type="BTekModel.Store.UserScheduleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserScheduleSchema">
+              <PropertyRef Name="OrganisationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSched__Sched__7E02B4CC">
+          <End Role="ScheduleSchema" Type="BTekModel.Store.ScheduleSchema" Multiplicity="0..1" />
+          <End Role="UserScheduleSchema" Type="BTekModel.Store.UserScheduleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserScheduleSchema">
+              <PropertyRef Name="ScheduleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSched__UserI__7FEAFD3E">
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="0..1" />
+          <End Role="UserScheduleSchema" Type="BTekModel.Store.UserScheduleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserScheduleSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSchem__Addre__2A4B4B5E">
+          <End Role="AddressSchema" Type="BTekModel.Store.AddressSchema" Multiplicity="0..1" />
+          <End Role="UserSchema" Type="BTekModel.Store.UserSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserSchema">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BTekModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="BTekEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AddressSchemas" EntityType="BTekModel.AddressSchema" />
+          <EntitySet Name="EmailSchemas" EntityType="BTekModel.EmailSchema" />
+          <EntitySet Name="InvitationSchemas" EntityType="BTekModel.InvitationSchema" />
+          <EntitySet Name="LocationSchemas" EntityType="BTekModel.LocationSchema" />
+          <EntitySet Name="LogBookSchemas" EntityType="BTekModel.LogBookSchema" />
+          <EntitySet Name="LogSchemas" EntityType="BTekModel.LogSchema" />
+          <EntitySet Name="MaterialSchemas" EntityType="BTekModel.MaterialSchema" />
+          <EntitySet Name="MemberSchemas" EntityType="BTekModel.MemberSchema" />
+          <EntitySet Name="OrganisationSchemas" EntityType="BTekModel.OrganisationSchema" />
+          <EntitySet Name="ProjectSchemas" EntityType="BTekModel.ProjectSchema" />
+          <EntitySet Name="RoleSchemas" EntityType="BTekModel.RoleSchema" />
+          <EntitySet Name="ScheduleSchemas" EntityType="BTekModel.ScheduleSchema" />
+          <EntitySet Name="ServiceSchemas" EntityType="BTekModel.ServiceSchema" />
+          <EntitySet Name="StageSchemas" EntityType="BTekModel.StageSchema" />
+          <EntitySet Name="sysdiagrams" EntityType="BTekModel.sysdiagram" />
+          <EntitySet Name="TaskSchemas" EntityType="BTekModel.TaskSchema" />
+          <EntitySet Name="UserScheduleSchemas" EntityType="BTekModel.UserScheduleSchema" />
+          <EntitySet Name="UserSchemas" EntityType="BTekModel.UserSchema" />
+          <AssociationSet Name="FK__Organisat__Addre__4E88ABD4" Association="BTekModel.FK__Organisat__Addre__4E88ABD4">
+            <End Role="AddressSchema" EntitySet="AddressSchemas" />
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProjectSc__CustA__571DF1D5" Association="BTekModel.FK__ProjectSc__CustA__571DF1D5">
+            <End Role="AddressSchema" EntitySet="AddressSchemas" />
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProjectSc__SiteA__5629CD9C" Association="BTekModel.FK__ProjectSc__SiteA__5629CD9C">
+            <End Role="AddressSchema" EntitySet="AddressSchemas" />
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSchem__Addre__2A4B4B5E" Association="BTekModel.FK__UserSchem__Addre__2A4B4B5E">
+            <End Role="AddressSchema" EntitySet="AddressSchemas" />
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__Membe__02084FDA" Association="BTekModel.FK__Invitatio__Membe__02084FDA">
+            <End Role="MemberSchema" EntitySet="MemberSchemas" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__OrgId__04E4BC85" Association="BTekModel.FK__Invitatio__OrgId__04E4BC85">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__Recip__01142BA1" Association="BTekModel.FK__Invitatio__Recip__01142BA1">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__RoleI__02FC7413" Association="BTekModel.FK__Invitatio__RoleI__02FC7413">
+            <End Role="RoleSchema" EntitySet="RoleSchemas" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Invitatio__Sende__03F0984C" Association="BTekModel.FK__Invitatio__Sende__03F0984C">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="InvitationSchema" EntitySet="InvitationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LocationS__UserI__412EB0B6" Association="BTekModel.FK__LocationS__UserI__412EB0B6">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="LocationSchema" EntitySet="LocationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LogBookSc__OrgId__40058253" Association="BTekModel.FK__LogBookSc__OrgId__40058253">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="LogBookSchema" EntitySet="LogBookSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LogBookSc__Proje__3F115E1A" Association="BTekModel.FK__LogBookSc__Proje__3F115E1A">
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+            <End Role="LogBookSchema" EntitySet="LogBookSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LogBookSc__UserI__40F9A68C" Association="BTekModel.FK__LogBookSc__UserI__40F9A68C">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="LogBookSchema" EntitySet="LogBookSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialS__OrgId__6442E2C9" Association="BTekModel.FK__MaterialS__OrgId__6442E2C9">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="MaterialSchema" EntitySet="MaterialSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialS__Proje__634EBE90" Association="BTekModel.FK__MaterialS__Proje__634EBE90">
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+            <End Role="MaterialSchema" EntitySet="MaterialSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MaterialS__Stage__625A9A57" Association="BTekModel.FK__MaterialS__Stage__625A9A57">
+            <End Role="StageSchema" EntitySet="StageSchemas" />
+            <End Role="MaterialSchema" EntitySet="MaterialSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__OrgId__797309D9" Association="BTekModel.FK__MemberSch__OrgId__797309D9">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="MemberSchema" EntitySet="MemberSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__RoleI__778AC167" Association="BTekModel.FK__MemberSch__RoleI__778AC167">
+            <End Role="RoleSchema" EntitySet="RoleSchemas" />
+            <End Role="MemberSchema" EntitySet="MemberSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__Sched__76969D2E" Association="BTekModel.FK__MemberSch__Sched__76969D2E">
+            <End Role="ScheduleSchema" EntitySet="ScheduleSchemas" />
+            <End Role="MemberSchema" EntitySet="MemberSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__MemberSch__UserI__787EE5A0" Association="BTekModel.FK__MemberSch__UserI__787EE5A0">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="MemberSchema" EntitySet="MemberSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Organ__76619304" Association="BTekModel.FK__dbo_TaskS__Organ__76619304">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="TaskSchema" EntitySet="TaskSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Organisat__Owner__4F7CD00D" Association="BTekModel.FK__Organisat__Owner__4F7CD00D">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__ProjectSc__OrgId__5812160E" Association="BTekModel.FK__ProjectSc__OrgId__5812160E">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RoleSchem__Organ__6FE99F9F" Association="BTekModel.FK__RoleSchem__Organ__6FE99F9F">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="RoleSchema" EntitySet="RoleSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StageSche__OrgId__55009F39" Association="BTekModel.FK__StageSche__OrgId__55009F39">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="StageSchema" EntitySet="StageSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSched__Organ__7EF6D905" Association="BTekModel.FK__UserSched__Organ__7EF6D905">
+            <End Role="OrganisationSchema" EntitySet="OrganisationSchemas" />
+            <End Role="UserScheduleSchema" EntitySet="UserScheduleSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Proje__756D6ECB" Association="BTekModel.FK__dbo_TaskS__Proje__756D6ECB">
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+            <End Role="TaskSchema" EntitySet="TaskSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__StageSche__Proje__540C7B00" Association="BTekModel.FK__StageSche__Proje__540C7B00">
+            <End Role="ProjectSchema" EntitySet="ProjectSchemas" />
+            <End Role="StageSchema" EntitySet="StageSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__RoleSchem__Sched__6EF57B66" Association="BTekModel.FK__RoleSchem__Sched__6EF57B66">
+            <End Role="ScheduleSchema" EntitySet="ScheduleSchemas" />
+            <End Role="RoleSchema" EntitySet="RoleSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSched__Sched__7E02B4CC" Association="BTekModel.FK__UserSched__Sched__7E02B4CC">
+            <End Role="ScheduleSchema" EntitySet="ScheduleSchemas" />
+            <End Role="UserScheduleSchema" EntitySet="UserScheduleSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Creat__7849DB76" Association="BTekModel.FK__dbo_TaskS__Creat__7849DB76">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="TaskSchema" EntitySet="TaskSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__dbo_TaskS__Curre__7755B73D" Association="BTekModel.FK__dbo_TaskS__Curre__7755B73D">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="TaskSchema" EntitySet="TaskSchemas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__UserSched__UserI__7FEAFD3E" Association="BTekModel.FK__UserSched__UserI__7FEAFD3E">
+            <End Role="UserSchema" EntitySet="UserSchemas" />
+            <End Role="UserScheduleSchema" EntitySet="UserScheduleSchemas" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="AddressSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="C_id" Type="Guid" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="Address1" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address2" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Suburb" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PostCode" Type="String" MaxLength="20" Unicode="true" FixedLength="false" />
+          <Property Name="State" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Country" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="xlon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ylat" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="OrganisationSchemas" Relationship="BTekModel.FK__Organisat__Addre__4E88ABD4" FromRole="AddressSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ProjectSchemas" Relationship="BTekModel.FK__ProjectSc__CustA__571DF1D5" FromRole="AddressSchema" ToRole="ProjectSchema" />
+          <NavigationProperty Name="ProjectSchemas1" Relationship="BTekModel.FK__ProjectSc__SiteA__5629CD9C" FromRole="AddressSchema" ToRole="ProjectSchema" />
+          <NavigationProperty Name="UserSchemas" Relationship="BTekModel.FK__UserSchem__Addre__2A4B4B5E" FromRole="AddressSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="EmailSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="To" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Subject" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Attachment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="InvitationSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="OrgId" Type="Int32" />
+          <Property Name="SenderId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="MemberId" Type="Int32" />
+          <Property Name="RecipientEmail" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RecipientId" Type="Int32" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <Property Name="DateSent" Type="DateTime" />
+          <Property Name="DateExpires" Type="DateTime" />
+          <Property Name="Message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="MemberSchema" Relationship="BTekModel.FK__Invitatio__Membe__02084FDA" FromRole="InvitationSchema" ToRole="MemberSchema" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__Invitatio__OrgId__04E4BC85" FromRole="InvitationSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__Invitatio__Recip__01142BA1" FromRole="InvitationSchema" ToRole="UserSchema" />
+          <NavigationProperty Name="RoleSchema" Relationship="BTekModel.FK__Invitatio__RoleI__02FC7413" FromRole="InvitationSchema" ToRole="RoleSchema" />
+          <NavigationProperty Name="UserSchema1" Relationship="BTekModel.FK__Invitatio__Sende__03F0984C" FromRole="InvitationSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="LocationSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="Recorded" Type="DateTime" Nullable="false" />
+          <Property Name="Source" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Accuracy" Type="Int32" />
+          <Property Name="Altitude" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Bearing" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Speed" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="xlon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ylat" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__LocationS__UserI__412EB0B6" FromRole="LocationSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="LogBookSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="OrgId" Type="Int32" />
+          <Property Name="ProjectId" Type="Int32" />
+          <Property Name="AddressId" Type="Int32" />
+          <Property Name="Started" Type="DateTime" />
+          <Property Name="Ended" Type="DateTime" />
+          <Property Name="DurationMS" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="DistSource" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="DistTravelled" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Activity" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Confidence" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="OdometerStart" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="OdometerEnd" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="IsBusinessRelated" Type="Boolean" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Source" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="AvgAltitude" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MinAltitude" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MaxAltitude" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="AvgSpeed" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MinSpeed" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="MaxSpeed" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="AvgAccuracy" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Updates" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Start_xlon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Start_ylon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="End_xlon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="End_ylon" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Address_Street" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Address_Suburb" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Address_PostCode" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Address_State" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Address_Country" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__LogBookSc__OrgId__40058253" FromRole="LogBookSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ProjectSchema" Relationship="BTekModel.FK__LogBookSc__Proje__3F115E1A" FromRole="LogBookSchema" ToRole="ProjectSchema" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__LogBookSc__UserI__40F9A68C" FromRole="LogBookSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="LogSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="Generated" Type="DateTime" />
+          <Property Name="Object" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Method" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Severity" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Message" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="MaterialSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="OrgId" Type="Int32" />
+          <Property Name="ProjectId" Type="Int32" />
+          <Property Name="StageId" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="UnitCost" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Quantity" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="DeliveryCost" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="TotalCost" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="QuotedValue" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="IsOrdered" Type="Boolean" />
+          <Property Name="IsDelivered" Type="Boolean" />
+          <Property Name="ShowOnQuote" Type="Boolean" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__MaterialS__OrgId__6442E2C9" FromRole="MaterialSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ProjectSchema" Relationship="BTekModel.FK__MaterialS__Proje__634EBE90" FromRole="MaterialSchema" ToRole="ProjectSchema" />
+          <NavigationProperty Name="StageSchema" Relationship="BTekModel.FK__MaterialS__Stage__625A9A57" FromRole="MaterialSchema" ToRole="StageSchema" />
+        </EntityType>
+        <EntityType Name="MemberSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="OrgId" Type="Int32" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="RoleId" Type="Int32" />
+          <Property Name="ScheduleId" Type="Int32" />
+          <Property Name="IsOwner" Type="Boolean" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="InvitationSchemas" Relationship="BTekModel.FK__Invitatio__Membe__02084FDA" FromRole="MemberSchema" ToRole="InvitationSchema" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__MemberSch__OrgId__797309D9" FromRole="MemberSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="RoleSchema" Relationship="BTekModel.FK__MemberSch__RoleI__778AC167" FromRole="MemberSchema" ToRole="RoleSchema" />
+          <NavigationProperty Name="ScheduleSchema" Relationship="BTekModel.FK__MemberSch__Sched__76969D2E" FromRole="MemberSchema" ToRole="ScheduleSchema" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__MemberSch__UserI__787EE5A0" FromRole="MemberSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="OrganisationSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="OwnerId" Type="Int32" />
+          <Property Name="AddressId" Type="Int32" />
+          <Property Name="AccountType" Type="Int32" />
+          <Property Name="AccountStatus" Type="Int32" />
+          <Property Name="DateCreated" Type="DateTime" />
+          <Property Name="DateUpdated" Type="DateTime" />
+          <Property Name="DateExpires" Type="DateTime" />
+          <NavigationProperty Name="AddressSchema" Relationship="BTekModel.FK__Organisat__Addre__4E88ABD4" FromRole="OrganisationSchema" ToRole="AddressSchema" />
+          <NavigationProperty Name="InvitationSchemas" Relationship="BTekModel.FK__Invitatio__OrgId__04E4BC85" FromRole="OrganisationSchema" ToRole="InvitationSchema" />
+          <NavigationProperty Name="LogBookSchemas" Relationship="BTekModel.FK__LogBookSc__OrgId__40058253" FromRole="OrganisationSchema" ToRole="LogBookSchema" />
+          <NavigationProperty Name="MaterialSchemas" Relationship="BTekModel.FK__MaterialS__OrgId__6442E2C9" FromRole="OrganisationSchema" ToRole="MaterialSchema" />
+          <NavigationProperty Name="MemberSchemas" Relationship="BTekModel.FK__MemberSch__OrgId__797309D9" FromRole="OrganisationSchema" ToRole="MemberSchema" />
+          <NavigationProperty Name="TaskSchemas" Relationship="BTekModel.FK__dbo_TaskS__Organ__76619304" FromRole="OrganisationSchema" ToRole="TaskSchema" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__Organisat__Owner__4F7CD00D" FromRole="OrganisationSchema" ToRole="UserSchema" />
+          <NavigationProperty Name="ProjectSchemas" Relationship="BTekModel.FK__ProjectSc__OrgId__5812160E" FromRole="OrganisationSchema" ToRole="ProjectSchema" />
+          <NavigationProperty Name="RoleSchemas" Relationship="BTekModel.FK__RoleSchem__Organ__6FE99F9F" FromRole="OrganisationSchema" ToRole="RoleSchema" />
+          <NavigationProperty Name="StageSchemas" Relationship="BTekModel.FK__StageSche__OrgId__55009F39" FromRole="OrganisationSchema" ToRole="StageSchema" />
+          <NavigationProperty Name="UserScheduleSchemas" Relationship="BTekModel.FK__UserSched__Organ__7EF6D905" FromRole="OrganisationSchema" ToRole="UserScheduleSchema" />
+        </EntityType>
+        <EntityType Name="ProjectSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="OrgId" Type="Int32" />
+          <Property Name="CreateDate" Type="DateTime" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Code" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Status" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustFirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustLastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustEmail" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustPhone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CustAddressId" Type="Int32" />
+          <Property Name="SiteAddressId" Type="Int32" />
+          <Property Name="QuotedValue" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="QuotedHrs" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ActualHrs" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Margin" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="AddressSchema" Relationship="BTekModel.FK__ProjectSc__CustA__571DF1D5" FromRole="ProjectSchema" ToRole="AddressSchema" />
+          <NavigationProperty Name="AddressSchema1" Relationship="BTekModel.FK__ProjectSc__SiteA__5629CD9C" FromRole="ProjectSchema" ToRole="AddressSchema" />
+          <NavigationProperty Name="LogBookSchemas" Relationship="BTekModel.FK__LogBookSc__Proje__3F115E1A" FromRole="ProjectSchema" ToRole="LogBookSchema" />
+          <NavigationProperty Name="MaterialSchemas" Relationship="BTekModel.FK__MaterialS__Proje__634EBE90" FromRole="ProjectSchema" ToRole="MaterialSchema" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__ProjectSc__OrgId__5812160E" FromRole="ProjectSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="TaskSchemas" Relationship="BTekModel.FK__dbo_TaskS__Proje__756D6ECB" FromRole="ProjectSchema" ToRole="TaskSchema" />
+          <NavigationProperty Name="StageSchemas" Relationship="BTekModel.FK__StageSche__Proje__540C7B00" FromRole="ProjectSchema" ToRole="StageSchema" />
+        </EntityType>
+        <EntityType Name="RoleSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="OrganisationId" Type="Int32" />
+          <Property Name="ScheduleId" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Rate" Type="Int32" />
+          <Property Name="ModifyOrg" Type="Boolean" />
+          <Property Name="ModifyRole" Type="Boolean" />
+          <Property Name="ModifyPerson" Type="Boolean" />
+          <Property Name="ModifyLogbook" Type="Boolean" />
+          <Property Name="ModifyProject" Type="Boolean" />
+          <Property Name="ModifyStage" Type="Boolean" />
+          <Property Name="ModifyMaterial" Type="Boolean" />
+          <Property Name="ModifyTask" Type="Boolean" />
+          <Property Name="ModifyTool" Type="Boolean" />
+          <NavigationProperty Name="InvitationSchemas" Relationship="BTekModel.FK__Invitatio__RoleI__02FC7413" FromRole="RoleSchema" ToRole="InvitationSchema" />
+          <NavigationProperty Name="MemberSchemas" Relationship="BTekModel.FK__MemberSch__RoleI__778AC167" FromRole="RoleSchema" ToRole="MemberSchema" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__RoleSchem__Organ__6FE99F9F" FromRole="RoleSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ScheduleSchema" Relationship="BTekModel.FK__RoleSchem__Sched__6EF57B66" FromRole="RoleSchema" ToRole="ScheduleSchema" />
+        </EntityType>
+        <EntityType Name="ScheduleSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="RepeatDays" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="StartTimeMS" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="EndTimeMS" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="FrequencyMS" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="MemberSchemas" Relationship="BTekModel.FK__MemberSch__Sched__76969D2E" FromRole="ScheduleSchema" ToRole="MemberSchema" />
+          <NavigationProperty Name="RoleSchemas" Relationship="BTekModel.FK__RoleSchem__Sched__6EF57B66" FromRole="ScheduleSchema" ToRole="RoleSchema" />
+          <NavigationProperty Name="UserScheduleSchemas" Relationship="BTekModel.FK__UserSched__Sched__7E02B4CC" FromRole="ScheduleSchema" ToRole="UserScheduleSchema" />
+        </EntityType>
+        <EntityType Name="ServiceSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="SystemName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ServiceName" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Version" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LiveUrl" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="DevUrl" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TestUrl" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="StageSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="OrgId" Type="Int32" />
+          <Property Name="ProjectId" Type="Int32" />
+          <Property Name="Sequence" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Description" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="QuotedValue" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ShowOnQuote" Type="Boolean" />
+          <Property Name="EstStartDate" Type="DateTime" />
+          <Property Name="IsComplete" Type="Boolean" />
+          <NavigationProperty Name="MaterialSchemas" Relationship="BTekModel.FK__MaterialS__Stage__625A9A57" FromRole="StageSchema" ToRole="MaterialSchema" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__StageSche__OrgId__55009F39" FromRole="StageSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ProjectSchema" Relationship="BTekModel.FK__StageSche__Proje__540C7B00" FromRole="StageSchema" ToRole="ProjectSchema" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" Unicode="true" FixedLength="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="TaskSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="CreatorId" Type="Int32" />
+          <Property Name="CreatedDate" Type="DateTime" />
+          <Property Name="CurrentOwnerId" Type="Int32" />
+          <Property Name="LastUpdateDate" Type="DateTime" />
+          <Property Name="OrganisationId" Type="Int32" />
+          <Property Name="ProjectId" Type="Int32" />
+          <Property Name="ProjectStageId" Type="Int32" />
+          <Property Name="EstStartDate" Type="DateTime" />
+          <Property Name="EstHours" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="ActStartDate" Type="DateTime" />
+          <Property Name="ActHours" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Priority" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="Status" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Title" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="Detail" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="History" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+          <Property Name="NotifyNoShow" Type="Boolean" />
+          <Property Name="NotifyApproach" Type="Boolean" />
+          <Property Name="MyTaskRating" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="BossTaskRating" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="CustTaskRating" Type="Decimal" Precision="10" Scale="2" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__dbo_TaskS__Organ__76619304" FromRole="TaskSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ProjectSchema" Relationship="BTekModel.FK__dbo_TaskS__Proje__756D6ECB" FromRole="TaskSchema" ToRole="ProjectSchema" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__dbo_TaskS__Creat__7849DB76" FromRole="TaskSchema" ToRole="UserSchema" />
+          <NavigationProperty Name="UserSchema1" Relationship="BTekModel.FK__dbo_TaskS__Curre__7755B73D" FromRole="TaskSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="UserScheduleSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="C_id" Type="Guid" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" />
+          <Property Name="UserId" Type="Int32" />
+          <Property Name="OrganisationId" Type="Int32" />
+          <Property Name="ScheduleId" Type="Int32" />
+          <NavigationProperty Name="OrganisationSchema" Relationship="BTekModel.FK__UserSched__Organ__7EF6D905" FromRole="UserScheduleSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="ScheduleSchema" Relationship="BTekModel.FK__UserSched__Sched__7E02B4CC" FromRole="UserScheduleSchema" ToRole="ScheduleSchema" />
+          <NavigationProperty Name="UserSchema" Relationship="BTekModel.FK__UserSched__UserI__7FEAFD3E" FromRole="UserScheduleSchema" ToRole="UserSchema" />
+        </EntityType>
+        <EntityType Name="UserSchema">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="C_id" Type="Guid" Nullable="false" />
+          <Property Name="AddressId" Type="Int32" />
+          <Property Name="LastSvrUpdateDate" Type="DateTime" Nullable="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Salt" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="WPUserId" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AccountType" Type="Int32" />
+          <Property Name="AccountStatus" Type="Int32" />
+          <Property Name="DateCreated" Type="DateTime" Nullable="false" />
+          <Property Name="DateUpdated" Type="DateTime" Nullable="false" />
+          <Property Name="DateExpires" Type="DateTime" />
+          <NavigationProperty Name="AddressSchema" Relationship="BTekModel.FK__UserSchem__Addre__2A4B4B5E" FromRole="UserSchema" ToRole="AddressSchema" />
+          <NavigationProperty Name="InvitationSchemas" Relationship="BTekModel.FK__Invitatio__Recip__01142BA1" FromRole="UserSchema" ToRole="InvitationSchema" />
+          <NavigationProperty Name="InvitationSchemas1" Relationship="BTekModel.FK__Invitatio__Sende__03F0984C" FromRole="UserSchema" ToRole="InvitationSchema" />
+          <NavigationProperty Name="LocationSchemas" Relationship="BTekModel.FK__LocationS__UserI__412EB0B6" FromRole="UserSchema" ToRole="LocationSchema" />
+          <NavigationProperty Name="LogBookSchemas" Relationship="BTekModel.FK__LogBookSc__UserI__40F9A68C" FromRole="UserSchema" ToRole="LogBookSchema" />
+          <NavigationProperty Name="MemberSchemas" Relationship="BTekModel.FK__MemberSch__UserI__787EE5A0" FromRole="UserSchema" ToRole="MemberSchema" />
+          <NavigationProperty Name="OrganisationSchemas" Relationship="BTekModel.FK__Organisat__Owner__4F7CD00D" FromRole="UserSchema" ToRole="OrganisationSchema" />
+          <NavigationProperty Name="TaskSchemas" Relationship="BTekModel.FK__dbo_TaskS__Creat__7849DB76" FromRole="UserSchema" ToRole="TaskSchema" />
+          <NavigationProperty Name="TaskSchemas1" Relationship="BTekModel.FK__dbo_TaskS__Curre__7755B73D" FromRole="UserSchema" ToRole="TaskSchema" />
+          <NavigationProperty Name="UserScheduleSchemas" Relationship="BTekModel.FK__UserSched__UserI__7FEAFD3E" FromRole="UserSchema" ToRole="UserScheduleSchema" />
+        </EntityType>
+        <Association Name="FK__Organisat__Addre__4E88ABD4">
+          <End Role="AddressSchema" Type="BTekModel.AddressSchema" Multiplicity="0..1" />
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrganisationSchema">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProjectSc__CustA__571DF1D5">
+          <End Role="AddressSchema" Type="BTekModel.AddressSchema" Multiplicity="0..1" />
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProjectSchema">
+              <PropertyRef Name="CustAddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProjectSc__SiteA__5629CD9C">
+          <End Role="AddressSchema" Type="BTekModel.AddressSchema" Multiplicity="0..1" />
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProjectSchema">
+              <PropertyRef Name="SiteAddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSchem__Addre__2A4B4B5E">
+          <End Role="AddressSchema" Type="BTekModel.AddressSchema" Multiplicity="0..1" />
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AddressSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserSchema">
+              <PropertyRef Name="AddressId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__Membe__02084FDA">
+          <End Role="MemberSchema" Type="BTekModel.MemberSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MemberSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="MemberId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__OrgId__04E4BC85">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__Recip__01142BA1">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="RecipientId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__RoleI__02FC7413">
+          <End Role="RoleSchema" Type="BTekModel.RoleSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Invitatio__Sende__03F0984C">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="InvitationSchema" Type="BTekModel.InvitationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="InvitationSchema">
+              <PropertyRef Name="SenderId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LocationS__UserI__412EB0B6">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="LocationSchema" Type="BTekModel.LocationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LocationSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LogBookSc__OrgId__40058253">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="LogBookSchema" Type="BTekModel.LogBookSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LogBookSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LogBookSc__Proje__3F115E1A">
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="0..1" />
+          <End Role="LogBookSchema" Type="BTekModel.LogBookSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LogBookSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LogBookSc__UserI__40F9A68C">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="LogBookSchema" Type="BTekModel.LogBookSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="LogBookSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialS__OrgId__6442E2C9">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="MaterialSchema" Type="BTekModel.MaterialSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialS__Proje__634EBE90">
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="0..1" />
+          <End Role="MaterialSchema" Type="BTekModel.MaterialSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MaterialS__Stage__625A9A57">
+          <End Role="StageSchema" Type="BTekModel.StageSchema" Multiplicity="0..1" />
+          <End Role="MaterialSchema" Type="BTekModel.MaterialSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="StageSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MaterialSchema">
+              <PropertyRef Name="StageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__OrgId__797309D9">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__RoleI__778AC167">
+          <End Role="RoleSchema" Type="BTekModel.RoleSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="RoleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__Sched__76969D2E">
+          <End Role="ScheduleSchema" Type="BTekModel.ScheduleSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="ScheduleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__MemberSch__UserI__787EE5A0">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="MemberSchema" Type="BTekModel.MemberSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="MemberSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Organ__76619304">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="OrganisationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Organisat__Owner__4F7CD00D">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="OrganisationSchema">
+              <PropertyRef Name="OwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__ProjectSc__OrgId__5812160E">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="ProjectSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RoleSchem__Organ__6FE99F9F">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="RoleSchema" Type="BTekModel.RoleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleSchema">
+              <PropertyRef Name="OrganisationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StageSche__OrgId__55009F39">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="StageSchema" Type="BTekModel.StageSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StageSchema">
+              <PropertyRef Name="OrgId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSched__Organ__7EF6D905">
+          <End Role="OrganisationSchema" Type="BTekModel.OrganisationSchema" Multiplicity="0..1" />
+          <End Role="UserScheduleSchema" Type="BTekModel.UserScheduleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="OrganisationSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserScheduleSchema">
+              <PropertyRef Name="OrganisationId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Proje__756D6ECB">
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__StageSche__Proje__540C7B00">
+          <End Role="ProjectSchema" Type="BTekModel.ProjectSchema" Multiplicity="0..1" />
+          <End Role="StageSchema" Type="BTekModel.StageSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ProjectSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="StageSchema">
+              <PropertyRef Name="ProjectId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__RoleSchem__Sched__6EF57B66">
+          <End Role="ScheduleSchema" Type="BTekModel.ScheduleSchema" Multiplicity="0..1" />
+          <End Role="RoleSchema" Type="BTekModel.RoleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="RoleSchema">
+              <PropertyRef Name="ScheduleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSched__Sched__7E02B4CC">
+          <End Role="ScheduleSchema" Type="BTekModel.ScheduleSchema" Multiplicity="0..1" />
+          <End Role="UserScheduleSchema" Type="BTekModel.UserScheduleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ScheduleSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserScheduleSchema">
+              <PropertyRef Name="ScheduleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Creat__7849DB76">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="CreatorId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__dbo_TaskS__Curre__7755B73D">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="TaskSchema" Type="BTekModel.TaskSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="TaskSchema">
+              <PropertyRef Name="CurrentOwnerId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__UserSched__UserI__7FEAFD3E">
+          <End Role="UserSchema" Type="BTekModel.UserSchema" Multiplicity="0..1" />
+          <End Role="UserScheduleSchema" Type="BTekModel.UserScheduleSchema" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserSchema">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="UserScheduleSchema">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="BTekModelStoreContainer" CdmEntityContainer="BTekEntities">
+          <EntitySetMapping Name="AddressSchemas">
+            <EntityTypeMapping TypeName="BTekModel.AddressSchema">
+              <MappingFragment StoreEntitySet="AddressSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Address2" ColumnName="Address2" />
+                <ScalarProperty Name="Suburb" ColumnName="Suburb" />
+                <ScalarProperty Name="PostCode" ColumnName="PostCode" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="xlon" ColumnName="xlon" />
+                <ScalarProperty Name="ylat" ColumnName="ylat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EmailSchemas">
+            <EntityTypeMapping TypeName="BTekModel.EmailSchema">
+              <MappingFragment StoreEntitySet="EmailSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="To" ColumnName="To" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Attachment" ColumnName="Attachment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InvitationSchemas">
+            <EntityTypeMapping TypeName="BTekModel.InvitationSchema">
+              <MappingFragment StoreEntitySet="InvitationSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="SenderId" ColumnName="SenderId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="MemberId" ColumnName="MemberId" />
+                <ScalarProperty Name="RecipientEmail" ColumnName="RecipientEmail" />
+                <ScalarProperty Name="RecipientId" ColumnName="RecipientId" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+                <ScalarProperty Name="DateExpires" ColumnName="DateExpires" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LocationSchemas">
+            <EntityTypeMapping TypeName="BTekModel.LocationSchema">
+              <MappingFragment StoreEntitySet="LocationSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Recorded" ColumnName="Recorded" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="Accuracy" ColumnName="Accuracy" />
+                <ScalarProperty Name="Altitude" ColumnName="Altitude" />
+                <ScalarProperty Name="Bearing" ColumnName="Bearing" />
+                <ScalarProperty Name="Speed" ColumnName="Speed" />
+                <ScalarProperty Name="xlon" ColumnName="xlon" />
+                <ScalarProperty Name="ylat" ColumnName="ylat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogBookSchemas">
+            <EntityTypeMapping TypeName="BTekModel.LogBookSchema">
+              <MappingFragment StoreEntitySet="LogBookSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="Started" ColumnName="Started" />
+                <ScalarProperty Name="Ended" ColumnName="Ended" />
+                <ScalarProperty Name="DurationMS" ColumnName="DurationMS" />
+                <ScalarProperty Name="DistSource" ColumnName="DistSource" />
+                <ScalarProperty Name="DistTravelled" ColumnName="DistTravelled" />
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="Confidence" ColumnName="Confidence" />
+                <ScalarProperty Name="OdometerStart" ColumnName="OdometerStart" />
+                <ScalarProperty Name="OdometerEnd" ColumnName="OdometerEnd" />
+                <ScalarProperty Name="IsBusinessRelated" ColumnName="IsBusinessRelated" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Source" ColumnName="Source" />
+                <ScalarProperty Name="AvgAltitude" ColumnName="AvgAltitude" />
+                <ScalarProperty Name="MinAltitude" ColumnName="MinAltitude" />
+                <ScalarProperty Name="MaxAltitude" ColumnName="MaxAltitude" />
+                <ScalarProperty Name="AvgSpeed" ColumnName="AvgSpeed" />
+                <ScalarProperty Name="MinSpeed" ColumnName="MinSpeed" />
+                <ScalarProperty Name="MaxSpeed" ColumnName="MaxSpeed" />
+                <ScalarProperty Name="AvgAccuracy" ColumnName="AvgAccuracy" />
+                <ScalarProperty Name="Updates" ColumnName="Updates" />
+                <ScalarProperty Name="Start_xlon" ColumnName="Start_xlon" />
+                <ScalarProperty Name="Start_ylon" ColumnName="Start_ylon" />
+                <ScalarProperty Name="End_xlon" ColumnName="End_xlon" />
+                <ScalarProperty Name="End_ylon" ColumnName="End_ylon" />
+                <ScalarProperty Name="Address_Street" ColumnName="Address_Street" />
+                <ScalarProperty Name="Address_Suburb" ColumnName="Address_Suburb" />
+                <ScalarProperty Name="Address_PostCode" ColumnName="Address_PostCode" />
+                <ScalarProperty Name="Address_State" ColumnName="Address_State" />
+                <ScalarProperty Name="Address_Country" ColumnName="Address_Country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LogSchemas">
+            <EntityTypeMapping TypeName="BTekModel.LogSchema">
+              <MappingFragment StoreEntitySet="LogSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Generated" ColumnName="Generated" />
+                <ScalarProperty Name="Object" ColumnName="Object" />
+                <ScalarProperty Name="Method" ColumnName="Method" />
+                <ScalarProperty Name="Severity" ColumnName="Severity" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MaterialSchemas">
+            <EntityTypeMapping TypeName="BTekModel.MaterialSchema">
+              <MappingFragment StoreEntitySet="MaterialSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="StageId" ColumnName="StageId" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="UnitCost" ColumnName="UnitCost" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="DeliveryCost" ColumnName="DeliveryCost" />
+                <ScalarProperty Name="TotalCost" ColumnName="TotalCost" />
+                <ScalarProperty Name="QuotedValue" ColumnName="QuotedValue" />
+                <ScalarProperty Name="IsOrdered" ColumnName="IsOrdered" />
+                <ScalarProperty Name="IsDelivered" ColumnName="IsDelivered" />
+                <ScalarProperty Name="ShowOnQuote" ColumnName="ShowOnQuote" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MemberSchemas">
+            <EntityTypeMapping TypeName="BTekModel.MemberSchema">
+              <MappingFragment StoreEntitySet="MemberSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+                <ScalarProperty Name="IsOwner" ColumnName="IsOwner" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrganisationSchemas">
+            <EntityTypeMapping TypeName="BTekModel.OrganisationSchema">
+              <MappingFragment StoreEntitySet="OrganisationSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OwnerId" ColumnName="OwnerId" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DateExpires" ColumnName="DateExpires" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectSchemas">
+            <EntityTypeMapping TypeName="BTekModel.ProjectSchema">
+              <MappingFragment StoreEntitySet="ProjectSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CustFirstName" ColumnName="CustFirstName" />
+                <ScalarProperty Name="CustLastName" ColumnName="CustLastName" />
+                <ScalarProperty Name="CustEmail" ColumnName="CustEmail" />
+                <ScalarProperty Name="CustPhone" ColumnName="CustPhone" />
+                <ScalarProperty Name="CustAddressId" ColumnName="CustAddressId" />
+                <ScalarProperty Name="SiteAddressId" ColumnName="SiteAddressId" />
+                <ScalarProperty Name="QuotedValue" ColumnName="QuotedValue" />
+                <ScalarProperty Name="QuotedHrs" ColumnName="QuotedHrs" />
+                <ScalarProperty Name="ActualHrs" ColumnName="ActualHrs" />
+                <ScalarProperty Name="Margin" ColumnName="Margin" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleSchemas">
+            <EntityTypeMapping TypeName="BTekModel.RoleSchema">
+              <MappingFragment StoreEntitySet="RoleSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="ModifyOrg" ColumnName="ModifyOrg" />
+                <ScalarProperty Name="ModifyRole" ColumnName="ModifyRole" />
+                <ScalarProperty Name="ModifyPerson" ColumnName="ModifyPerson" />
+                <ScalarProperty Name="ModifyLogbook" ColumnName="ModifyLogbook" />
+                <ScalarProperty Name="ModifyProject" ColumnName="ModifyProject" />
+                <ScalarProperty Name="ModifyStage" ColumnName="ModifyStage" />
+                <ScalarProperty Name="ModifyMaterial" ColumnName="ModifyMaterial" />
+                <ScalarProperty Name="ModifyTask" ColumnName="ModifyTask" />
+                <ScalarProperty Name="ModifyTool" ColumnName="ModifyTool" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScheduleSchemas">
+            <EntityTypeMapping TypeName="BTekModel.ScheduleSchema">
+              <MappingFragment StoreEntitySet="ScheduleSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="RepeatDays" ColumnName="RepeatDays" />
+                <ScalarProperty Name="StartTimeMS" ColumnName="StartTimeMS" />
+                <ScalarProperty Name="EndTimeMS" ColumnName="EndTimeMS" />
+                <ScalarProperty Name="FrequencyMS" ColumnName="FrequencyMS" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ServiceSchemas">
+            <EntityTypeMapping TypeName="BTekModel.ServiceSchema">
+              <MappingFragment StoreEntitySet="ServiceSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="SystemName" ColumnName="SystemName" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="Version" ColumnName="Version" />
+                <ScalarProperty Name="LiveUrl" ColumnName="LiveUrl" />
+                <ScalarProperty Name="DevUrl" ColumnName="DevUrl" />
+                <ScalarProperty Name="TestUrl" ColumnName="TestUrl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StageSchemas">
+            <EntityTypeMapping TypeName="BTekModel.StageSchema">
+              <MappingFragment StoreEntitySet="StageSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="Sequence" ColumnName="Sequence" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="QuotedValue" ColumnName="QuotedValue" />
+                <ScalarProperty Name="ShowOnQuote" ColumnName="ShowOnQuote" />
+                <ScalarProperty Name="EstStartDate" ColumnName="EstStartDate" />
+                <ScalarProperty Name="IsComplete" ColumnName="IsComplete" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BTekModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TaskSchemas">
+            <EntityTypeMapping TypeName="BTekModel.TaskSchema">
+              <MappingFragment StoreEntitySet="TaskSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="CreatorId" ColumnName="CreatorId" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="CurrentOwnerId" ColumnName="CurrentOwnerId" />
+                <ScalarProperty Name="LastUpdateDate" ColumnName="LastUpdateDate" />
+                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
+                <ScalarProperty Name="ProjectId" ColumnName="ProjectId" />
+                <ScalarProperty Name="ProjectStageId" ColumnName="ProjectStageId" />
+                <ScalarProperty Name="EstStartDate" ColumnName="EstStartDate" />
+                <ScalarProperty Name="EstHours" ColumnName="EstHours" />
+                <ScalarProperty Name="ActStartDate" ColumnName="ActStartDate" />
+                <ScalarProperty Name="ActHours" ColumnName="ActHours" />
+                <ScalarProperty Name="Priority" ColumnName="Priority" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Detail" ColumnName="Detail" />
+                <ScalarProperty Name="History" ColumnName="History" />
+                <ScalarProperty Name="NotifyNoShow" ColumnName="NotifyNoShow" />
+                <ScalarProperty Name="NotifyApproach" ColumnName="NotifyApproach" />
+                <ScalarProperty Name="MyTaskRating" ColumnName="MyTaskRating" />
+                <ScalarProperty Name="BossTaskRating" ColumnName="BossTaskRating" />
+                <ScalarProperty Name="CustTaskRating" ColumnName="CustTaskRating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserScheduleSchemas">
+            <EntityTypeMapping TypeName="BTekModel.UserScheduleSchema">
+              <MappingFragment StoreEntitySet="UserScheduleSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="OrganisationId" ColumnName="OrganisationId" />
+                <ScalarProperty Name="ScheduleId" ColumnName="ScheduleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSchemas">
+            <EntityTypeMapping TypeName="BTekModel.UserSchema">
+              <MappingFragment StoreEntitySet="UserSchema">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="C_id" ColumnName="_id" />
+                <ScalarProperty Name="AddressId" ColumnName="AddressId" />
+                <ScalarProperty Name="LastSvrUpdateDate" ColumnName="LastSvrUpdateDate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Salt" ColumnName="Salt" />
+                <ScalarProperty Name="WPUserId" ColumnName="WPUserId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="AccountType" ColumnName="AccountType" />
+                <ScalarProperty Name="AccountStatus" ColumnName="AccountStatus" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+                <ScalarProperty Name="DateExpires" ColumnName="DateExpires" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="BTek" ZoomLevel="64">
+        <EntityTypeShape EntityType="BTekModel.AddressSchema" Width="1.5" PointX="0.75" PointY="28.375" Height="3.903300781249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.EmailSchema" Width="1.5" PointX="0.75" PointY="0.75" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.InvitationSchema" Width="1.5" PointX="7.5" PointY="31.5" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.LocationSchema" Width="1.5" PointX="5.25" PointY="34.5" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.LogBookSchema" Width="1.5" PointX="10.5" PointY="29.625" Height="8.518535156249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.LogSchema" Width="1.5" PointX="2.75" PointY="0.75" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.MaterialSchema" Width="1.5" PointX="7.5" PointY="25.625" Height="4.480205078124996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.MemberSchema" Width="1.5" PointX="7.5" PointY="37" Height="3.7109993489583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.OrganisationSchema" Width="1.5" PointX="5.25" PointY="28.25" Height="5.2494108072916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.ProjectSchema" Width="1.5" PointX="10.5" PointY="23" Height="5.8263151041666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.RoleSchema" Width="1.5" PointX="13.5" PointY="28.375" Height="5.0571093750000067" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.ScheduleSchema" Width="1.5" PointX="11.25" PointY="39.375" Height="2.9417936197916674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.ServiceSchema" Width="1.5" PointX="4.75" PointY="0.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.StageSchema" Width="1.5" PointX="12.75" PointY="23.375" Height="3.7109993489583388" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.sysdiagram" Width="1.5" PointX="0.75" PointY="4.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.TaskSchema" Width="1.5" PointX="15.75" PointY="28" Height="6.4032194010416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.UserScheduleSchema" Width="1.5" PointX="13.5" PointY="34.5" Height="2.749492187499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="BTekModel.UserSchema" Width="1.5" PointX="3" PointY="33.25" Height="6.21091796875001" IsExpanded="true" />
+        <AssociationConnector Association="BTekModel.FK__Organisat__Addre__4E88ABD4" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="30.326650390624998" />
+          <ConnectorPoint PointX="5.25" PointY="30.326650390624998" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__ProjectSc__CustA__571DF1D5" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="28.375" />
+          <ConnectorPoint PointX="1.5" PointY="24.28125" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="24.28125" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="24.28125" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="24.28125" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="24.28125" />
+          <ConnectorPoint PointX="10.5" PointY="24.28125" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__ProjectSc__SiteA__5629CD9C" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.9062525" PointY="28.375" />
+          <ConnectorPoint PointX="1.9062525" PointY="24.953127499999994" />
+          <ConnectorPoint PointX="5.916666666666667" PointY="24.953127499999994" />
+          <ConnectorPoint PointX="6.083333333333333" PointY="24.953127499999994" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="24.953127499999994" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="24.953127499999994" />
+          <ConnectorPoint PointX="10.5" PointY="24.953127499999994" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__UserSchem__Addre__2A4B4B5E" ManuallyRouted="false">
+          <ConnectorPoint PointX="1.5" PointY="32.278300781249996" />
+          <ConnectorPoint PointX="1.5" PointY="36.355458984375005" />
+          <ConnectorPoint PointX="3" PointY="36.355458984375005" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__Invitatio__Membe__02084FDA" ManuallyRouted="false">
+          <ConnectorPoint PointX="8.25" PointY="37" />
+          <ConnectorPoint PointX="8.25" PointY="36.172506510416667" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__Invitatio__OrgId__04E4BC85" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="32.499705403645834" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="32.499705403645834" />
+          <ConnectorPoint PointX="7.458333333333333" PointY="32.499705403645834" />
+          <ConnectorPoint PointX="7.5" PointY="32.499705403645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__Invitatio__Recip__01142BA1" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="33.999705403645834" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="33.999705403645834" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="33.999705403645834" />
+          <ConnectorPoint PointX="7.5" PointY="33.999705403645834" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__Invitatio__RoleI__02FC7413" ManuallyRouted="false">
+          <ConnectorPoint PointX="13.5" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="13.333333333333334" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="13.166666666666666" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="12.958333333333334" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="12.791666666666666" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="12.25" PointY="30.903554687500005" />
+          <ConnectorPoint PointX="12.25" PointY="29.375" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="29.375" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="29.375" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="29.375" />
+          <ConnectorPoint PointX="10.166666666666666" PointY="29.375" />
+          <ConnectorPoint PointX="9.25" PointY="29.375" />
+          <ConnectorPoint PointX="9.25" PointY="30.355205078124996" />
+          <ConnectorPoint PointX="8.25" PointY="30.355205078124996" />
+          <ConnectorPoint PointX="8.25" PointY="31.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__Invitatio__Sende__03F0984C" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="34.281102701822917" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="34.281102701822917" />
+          <ConnectorPoint PointX="7.208333333333333" PointY="34.281102701822917" />
+          <ConnectorPoint PointX="7.5" PointY="34.281102701822917" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__LocationS__UserI__412EB0B6" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="36.259348958333334" />
+          <ConnectorPoint PointX="5.25" PointY="36.259348958333334" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__LogBookSc__OrgId__40058253" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="9.7916666666666661" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="10.291666666666666" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="30.958852539062498" />
+          <ConnectorPoint PointX="10.5" PointY="30.958852539062498" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__LogBookSc__Proje__3F115E1A" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="28.826315104166667" />
+          <ConnectorPoint PointX="11.25" PointY="29.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__LogBookSc__UserI__40F9A68C" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="39.46091796875001" />
+          <ConnectorPoint PointX="3.75" PointY="39.71091796875001" />
+          <ConnectorPoint PointX="7.25" PointY="39.71091796875001" />
+          <ConnectorPoint PointX="7.25" PointY="36.422506510416667" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="36.422506510416667" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="36.422506510416667" />
+          <ConnectorPoint PointX="10.125" PointY="36.422506510416667" />
+          <ConnectorPoint PointX="10.125" PointY="34.582445847656246" />
+          <ConnectorPoint PointX="10.291666666666666" PointY="34.582445847656246" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="34.582445847656246" />
+          <ConnectorPoint PointX="10.5" PointY="34.582445847656246" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MaterialS__OrgId__6442E2C9" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="29.177602539062498" />
+          <ConnectorPoint PointX="7.5" PointY="29.177602539062498" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MaterialS__Proje__634EBE90" ManuallyRouted="false">
+          <ConnectorPoint PointX="10.5" PointY="27.225657552083334" />
+          <ConnectorPoint PointX="9" PointY="27.225657552083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MaterialS__Stage__625A9A57" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="25.230499674479169" />
+          <ConnectorPoint PointX="12.25" PointY="25.230499674479169" />
+          <ConnectorPoint PointX="12.25" PointY="22.75" />
+          <ConnectorPoint PointX="8.25" PointY="22.75" />
+          <ConnectorPoint PointX="8.25" PointY="25.625" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MemberSch__OrgId__797309D9" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="33.498255961137822" />
+          <ConnectorPoint PointX="7.125" PointY="33.873255961137822" />
+          <ConnectorPoint PointX="7.125" PointY="38.355459484375004" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="38.355459484375004" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="38.355459484375004" />
+          <ConnectorPoint PointX="7.5" PointY="38.355459484375004" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MemberSch__RoleI__778AC167" ManuallyRouted="false">
+          <ConnectorPoint PointX="13.5" PointY="33.43210937500001" />
+          <ConnectorPoint PointX="13.125" PointY="33.80710937500001" />
+          <ConnectorPoint PointX="13.125" PointY="38.759267578125" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="38.759267578125" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="38.759267578125" />
+          <ConnectorPoint PointX="9" PointY="38.759267578125" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MemberSch__Sched__76969D2E" ManuallyRouted="false">
+          <ConnectorPoint PointX="11.25" PointY="40.042999674479169" />
+          <ConnectorPoint PointX="9" PointY="40.042999674479169" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__MemberSch__UserI__787EE5A0" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="38.970688726562507" />
+          <ConnectorPoint PointX="7.166666666666667" PointY="38.970688726562507" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="38.970688726562507" />
+          <ConnectorPoint PointX="7.5" PointY="38.970688726562507" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__dbo_TaskS__Organ__76619304" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="30.625776308593753" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="30.625776308593753" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="30.625776308593753" />
+          <ConnectorPoint PointX="9.7916666666666661" PointY="30.625776308593753" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="30.625776308593753" />
+          <ConnectorPoint PointX="10.25" PointY="30.625776308593753" />
+          <ConnectorPoint PointX="10.25" PointY="29.125" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="29.125" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="29.125" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="29.125" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="29.125" />
+          <ConnectorPoint PointX="12.916666666666666" PointY="29.125" />
+          <ConnectorPoint PointX="13.083333333333334" PointY="29.125" />
+          <ConnectorPoint PointX="13.25" PointY="29.125" />
+          <ConnectorPoint PointX="13.25" PointY="27.75" />
+          <ConnectorPoint PointX="13.666666166666667" PointY="27.75" />
+          <ConnectorPoint PointX="13.833332833333335" PointY="27.75" />
+          <ConnectorPoint PointX="16.010414166666667" PointY="27.75" />
+          <ConnectorPoint PointX="16.177080833333331" PointY="27.75" />
+          <ConnectorPoint PointX="16.5" PointY="27.75" />
+          <ConnectorPoint PointX="16.5" PointY="28" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__Organisat__Owner__4F7CD00D" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="33.25" />
+          <ConnectorPoint PointX="3.75" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="4.0729186666666672" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="4.2395853333333333" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="4.666666666666667" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="4.833333333333333" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="4.916666666666667" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="5.083333333333333" PointY="31.819577195312494" />
+          <ConnectorPoint PointX="5.25" PointY="31.819577195312494" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__ProjectSc__OrgId__5812160E" ManuallyRouted="false">
+          <ConnectorPoint PointX="6" PointY="28.25" />
+          <ConnectorPoint PointX="6" PointY="23.609372500000006" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="23.609372500000006" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="23.609372500000006" />
+          <ConnectorPoint PointX="10.5" PointY="23.609372500000006" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__RoleSchem__Organ__6FE99F9F" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="31.229428769531243" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="31.229428769531243" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="31.229428769531243" />
+          <ConnectorPoint PointX="10" PointY="31.229428769531243" />
+          <ConnectorPoint PointX="10" PointY="29.5" />
+          <ConnectorPoint PointX="10.166666666666666" PointY="29.5" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="29.5" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="29.5" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="29.5" />
+          <ConnectorPoint PointX="12.166666666666666" PointY="29.5" />
+          <ConnectorPoint PointX="12.333333333333334" PointY="29.5" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="29.5" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="29.5" />
+          <ConnectorPoint PointX="12.791666666666666" PointY="29.5" />
+          <ConnectorPoint PointX="12.958333333333334" PointY="29.5" />
+          <ConnectorPoint PointX="13" PointY="29.5" />
+          <ConnectorPoint PointX="13" PointY="28.125" />
+          <ConnectorPoint PointX="13.166666666666666" PointY="28.125" />
+          <ConnectorPoint PointX="13.333333333333334" PointY="28.125" />
+          <ConnectorPoint PointX="13.666666166666667" PointY="28.125" />
+          <ConnectorPoint PointX="13.833332833333335" PointY="28.125" />
+          <ConnectorPoint PointX="14.25" PointY="28.125" />
+          <ConnectorPoint PointX="14.25" PointY="28.375" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__StageSche__OrgId__55009F39" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="30.459238193359383" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="30.459238193359383" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="30.459238193359383" />
+          <ConnectorPoint PointX="9.7916666666666661" PointY="30.459238193359379" />
+          <ConnectorPoint PointX="10.333333333333334" PointY="30.459238193359383" />
+          <ConnectorPoint PointX="10.375" PointY="30.459238193359383" />
+          <ConnectorPoint PointX="10.375" PointY="29.25" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="29.25" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="29.25" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="29.25" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="29.25" />
+          <ConnectorPoint PointX="12.916666666666666" PointY="29.25" />
+          <ConnectorPoint PointX="13.083333333333334" PointY="29.25" />
+          <ConnectorPoint PointX="13.375" PointY="29.25" />
+          <ConnectorPoint PointX="13.375" PointY="28.25" />
+          <ConnectorPoint PointX="13.749999500000001" PointY="28.25" />
+          <ConnectorPoint PointX="13.749999500000001" PointY="27.085999348958339" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__UserSched__Organ__7EF6D905" ManuallyRouted="false">
+          <ConnectorPoint PointX="6.75" PointY="30.792314423828124" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="30.792314423828124" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="30.792314423828124" />
+          <ConnectorPoint PointX="9.7916666666666661" PointY="30.792314423828124" />
+          <ConnectorPoint PointX="10.208333333333334" PointY="30.792314423828124" />
+          <ConnectorPoint PointX="10.375" PointY="30.792314423828124" />
+          <ConnectorPoint PointX="10.375" PointY="38.393535156249996" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="38.393535156249996" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="38.393535156249996" />
+          <ConnectorPoint PointX="13.041666666666666" PointY="38.393535156249996" />
+          <ConnectorPoint PointX="13.208333333333334" PointY="38.393535156249996" />
+          <ConnectorPoint PointX="13.25" PointY="38.393535156249996" />
+          <ConnectorPoint PointX="13.25" PointY="34.125" />
+          <ConnectorPoint PointX="14.25" PointY="34.125" />
+          <ConnectorPoint PointX="14.25" PointY="34.5" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__dbo_TaskS__Proje__756D6ECB" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="27.449249674479169" />
+          <ConnectorPoint PointX="13.666666166666667" PointY="27.449249674479169" />
+          <ConnectorPoint PointX="13.833332833333335" PointY="27.449249674479169" />
+          <ConnectorPoint PointX="16.0937475" PointY="27.449249674479169" />
+          <ConnectorPoint PointX="16.0937475" PointY="28" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__StageSche__Proje__540C7B00" ManuallyRouted="false">
+          <ConnectorPoint PointX="12" PointY="24.240249837239585" />
+          <ConnectorPoint PointX="12.166666666666666" PointY="24.240249837239585" />
+          <ConnectorPoint PointX="12.333333333333334" PointY="24.240249837239585" />
+          <ConnectorPoint PointX="12.75" PointY="24.240249837239585" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__RoleSchem__Sched__6EF57B66" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.5" PointY="39.375" />
+          <ConnectorPoint PointX="12.5" PointY="29.006907552083334" />
+          <ConnectorPoint PointX="12.916666666666666" PointY="29.006907552083334" />
+          <ConnectorPoint PointX="13.083333333333334" PointY="29.006907552083334" />
+          <ConnectorPoint PointX="13.166666666666666" PointY="29.006907552083334" />
+          <ConnectorPoint PointX="13.458333333333334" PointY="29.006907552083334" />
+          <ConnectorPoint PointX="13.5" PointY="29.006907552083334" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__UserSched__Sched__7E02B4CC" ManuallyRouted="false">
+          <ConnectorPoint PointX="12.75" PointY="40.845896809895834" />
+          <ConnectorPoint PointX="14.25" PointY="40.845896809895834" />
+          <ConnectorPoint PointX="14.25" PointY="37.249492187499996" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__dbo_TaskS__Creat__7849DB76" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.156252" PointY="33.25" />
+          <ConnectorPoint PointX="4.156252" PointY="31.201609700520834" />
+          <ConnectorPoint PointX="5" PointY="31.201609700520834" />
+          <ConnectorPoint PointX="5" PointY="33.749410807291667" />
+          <ConnectorPoint PointX="6.9178215128205123" PointY="33.749410807291667" />
+          <ConnectorPoint PointX="7.0844881794871783" PointY="33.749410807291667" />
+          <ConnectorPoint PointX="7.25" PointY="33.749410807291667" />
+          <ConnectorPoint PointX="7.25" PointY="31.375" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="31.375" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="31.375" />
+          <ConnectorPoint PointX="10.125" PointY="31.375" />
+          <ConnectorPoint PointX="10.125" PointY="29.4375" />
+          <ConnectorPoint PointX="10.166666666666666" PointY="29.4375" />
+          <ConnectorPoint PointX="10.458333333333334" PointY="29.4375" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="29.4375" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="29.4375" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="29.4375" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="29.4375" />
+          <ConnectorPoint PointX="12.791666666666666" PointY="29.4375" />
+          <ConnectorPoint PointX="12.958333333333334" PointY="29.4375" />
+          <ConnectorPoint PointX="13.25" PointY="29.4375" />
+          <ConnectorPoint PointX="13.25" PointY="33.68210937500001" />
+          <ConnectorPoint PointX="15.375" PointY="33.68210937500001" />
+          <ConnectorPoint PointX="15.375" PointY="31.201609700520834" />
+          <ConnectorPoint PointX="15.416666666666666" PointY="31.201609700520834" />
+          <ConnectorPoint PointX="15.583333333333334" PointY="31.201609700520834" />
+          <ConnectorPoint PointX="15.75" PointY="31.201609700520834" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__dbo_TaskS__Curre__7755B73D" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.343748" PointY="33.25" />
+          <ConnectorPoint PointX="3.343748" PointY="31.451609700520834" />
+          <ConnectorPoint PointX="4.0729186666666672" PointY="31.451609700520834" />
+          <ConnectorPoint PointX="4.2395853333333333" PointY="31.451609700520834" />
+          <ConnectorPoint PointX="4.75" PointY="31.451609700520834" />
+          <ConnectorPoint PointX="4.75" PointY="33.874410807291667" />
+          <ConnectorPoint PointX="7.375" PointY="33.874410807291667" />
+          <ConnectorPoint PointX="7.375" PointY="31.3125" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="31.3125" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="31.3125" />
+          <ConnectorPoint PointX="9.875" PointY="31.3125" />
+          <ConnectorPoint PointX="9.875" PointY="29.3125" />
+          <ConnectorPoint PointX="10.166666666666666" PointY="29.3125" />
+          <ConnectorPoint PointX="10.333333333333334" PointY="29.3125" />
+          <ConnectorPoint PointX="11.166666666666666" PointY="29.3125" />
+          <ConnectorPoint PointX="11.333333333333334" PointY="29.3125" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="29.3125" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="29.3125" />
+          <ConnectorPoint PointX="12.875" PointY="29.3125" />
+          <ConnectorPoint PointX="12.875" PointY="33.80710937500001" />
+          <ConnectorPoint PointX="15.5" PointY="33.80710937500001" />
+          <ConnectorPoint PointX="15.5" PointY="29.569552850260422" />
+          <ConnectorPoint PointX="15.75" PointY="29.569552850260422" />
+        </AssociationConnector>
+        <AssociationConnector Association="BTekModel.FK__UserSched__UserI__7FEAFD3E" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="37.615018842447924" />
+          <ConnectorPoint PointX="5" PointY="37.615018842447924" />
+          <ConnectorPoint PointX="5" PointY="38.143697916666667" />
+          <ConnectorPoint PointX="7.041666666666667" PointY="38.143697916666667" />
+          <ConnectorPoint PointX="7.333333333333333" PointY="38.143697916666667" />
+          <ConnectorPoint PointX="7.375" PointY="38.143697916666667" />
+          <ConnectorPoint PointX="7.375" PointY="36.75" />
+          <ConnectorPoint PointX="8.1666666666666661" PointY="36.75" />
+          <ConnectorPoint PointX="8.3333333333333339" PointY="36.75" />
+          <ConnectorPoint PointX="10" PointY="36.75" />
+          <ConnectorPoint PointX="10" PointY="38.518535156249996" />
+          <ConnectorPoint PointX="12.416666666666666" PointY="38.518535156249996" />
+          <ConnectorPoint PointX="12.583333333333334" PointY="38.518535156249996" />
+          <ConnectorPoint PointX="13.041666666666666" PointY="38.518535156249996" />
+          <ConnectorPoint PointX="13.208333333333334" PointY="38.518535156249996" />
+          <ConnectorPoint PointX="13.843748" PointY="38.518535156249996" />
+          <ConnectorPoint PointX="13.843748" PointY="37.249492187499996" />
+        </AssociationConnector>
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
